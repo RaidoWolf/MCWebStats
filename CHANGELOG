@@ -1,0 +1,8 @@
+> 0.3 alpha
+	*Added cstdio's PHP-GetUUID to support Minecraft 1.8+ UUID system.
+	*Improved/updated documentation and legal
+	*Moved configuration values to config.php for loading via PHP include.
+	*Added legacy support for pre 1.8 servers and users who logged in prior to 1.8.
+> prior to 0.3 alpha
+	*Bad messy code without many features to discuss.
+	*Writes raw JSON stat files as plaintext.

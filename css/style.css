@@ -1,0 +1,37 @@
+/* ##################### */
+/* MCWebStats Stylesheet */
+/* ##################### */
+
+/* Page Container */
+.container {
+	
+}
+
+/* Page Wrapper */
+.wrapper {
+
+}
+
+/* Body Tag */
+body{
+
+}
+
+/* Anchor Tags */
+a {
+
+}
+
+/* Striped Row Tables */
+tr:nth-child(even) {
+	background-color: #DDDDDD;
+}
+tr:nth-child(odd) {
+	background-color: #BBBBBB;
+}
+tr:nth-child(even):hover {
+	background-color: #CCCCCC;
+}
+tr:nth-child(odd):hover {
+	background-color: #AAAAAA;
+}

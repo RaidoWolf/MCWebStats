@@ -1,13 +1,16 @@
-mcwebstats
+MCWebStats
 ==========
 
 Minecraft server/player statistics standalone web application suite.
+Version 0.3 alpha
+
+MCWebStats by Alexander Barber github.com/aebarber (Apache v2 License, see LICENSE)
+PHP-GetUUID by cstdio github.com/cstdio (MIT License, see LICENSE)
 
 stats.php - a form script that reads and displays stats of a given user (currently as formatted JSON).
 
-This only works on pre-1.7.6 minecraft servers.
-Updates beyond this version use the new UUID system for naming stats files.
-I am currently working on implementing the Mojang accounts API, but have not completed it yet.
+This software now works with both pre-1.7.6 servers without the UUID system,
+as well as newer 1.8+ UUID-based servers (thanks to cstdio's PHP-GetUUID)
 
 Copyright Notice:
 This software is provided with the Apache v2 license. For more information,

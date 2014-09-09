@@ -13,10 +13,30 @@ if (isset($_REQUEST['player'])) #check if $player variable is set
 	</textarea><br>
 	<input type='submit'>
 	</form>";
-	$player = $_REQUEST['player'];
+	if (isset($_POST['player']))
+		{$player = $_POST['player'];}
+	elseif (isset($_GET['player']))
+		{$player = $_GET['player'];}
+	else
+		{$player = "none";}
 	include 'config.php'; #include main configuration
 	include 'uuid.php'; #include PHP-GetUUID PlayerName->UUID converter
+	echo "Player: ".$player."<br />";
 	$playeruuid = GetUUID($player);
+	if (!preg_match("/-/-/-/-/",$playeruuid)) #check if not formatted like a proper uuid
+	{
+		$playeruuidnew = substr($playeruuid,0,8);
+		$playeruuidnew .= "-";
+		$playeruuidnew .= substr($playeruuid,8,4);
+		$playeruuidnew .= "-";
+		$playeruuidnew .= substr($playeruuid,12,4);
+		$playeruuidnew .= "-";
+		$playeruuidnew .= substr($playeruuid,16,4);
+		$playeruuidnew .= "-";
+		$playeruuidnew .= substr($playeruuid,20,12);
+		$playeruuid = $playeruuidnew; #format like proper uuid
+	}
+	echo "UUID: ".$playeruuid."<br />";
 	if (file_exists("$mcroot/world/stats/$playeruuid.json")) #test if we have stats for that player.
 		{
 		$stats = file_get_contents("$mcroot/world/stats/$playeruuid.json"); #read stats file contents.
@@ -27,6 +47,7 @@ if (isset($_REQUEST['player'])) #check if $player variable is set
 		}
 	else
 		{
+		echo "Attempting legacy stats...<br />";
 		if (file_exists("$mcroot/world/stats/$player.json")) #Legacy support
 			{
 			$stats = file_get_contents("$mcroot/world/stats/$player.json");

@@ -25,17 +25,17 @@ function distance_fancify ($inputDistance, $inputUnit="cm", $imperial=false)
 		{
 			if ($thisAsMi >= 1)
 			{
-				return $thisAsMi."mi";
+				return round($thisAsMi,4)."mi";
 			}
 			else
 			{
 				if ($thisAsFt >= 1)
 				{
-					return $thisAsFt."ft";
+					return round($thisAsFt,2)."ft";
 				}
 				else
 				{
-					return $thisAsIn."in";
+					return round($thisAsIn,0)."in";
 				}
 			}
 		}
@@ -43,17 +43,17 @@ function distance_fancify ($inputDistance, $inputUnit="cm", $imperial=false)
 		{
 			if ($thisAsKm >= 1)
 			{
-				return $thisAsKm."km";
+				return round($thisAsKm,4)."km";
 			}
 			else
 			{
 				if ($thisAsM >= 1)
 				{
-					return $thisAsM."m";
+					return round($thisAsM,2)."m";
 				}
 				else
 				{
-					return $inputDistance."cm";
+					return round($inputDistance,0)."cm";
 				}
 			}
 		}
@@ -75,17 +75,17 @@ function distance_fancify ($inputDistance, $inputUnit="cm", $imperial=false)
 		{
 			if ($thisAsMi >= 1)
 			{
-				return $thisAsMi."mi";
+				return round($thisAsMi,4)."mi";
 			}
 			else
 			{
 				if ($thisAsFt >= 1)
 				{
-					return $thisAsFt."ft";
+					return round($thisAsFt,2)."ft";
 				}
 				else
 				{
-					return $thisAsIn."in";
+					return round($thisAsIn,0)."in";
 				}
 			}
 		}
@@ -125,17 +125,17 @@ function distance_fancify ($inputDistance, $inputUnit="cm", $imperial=false)
 		{
 			if ($thisAsMi >= 1)
 			{
-				return $thisAsMi."mi";
+				return round($thisAsMi,4)."mi";
 			}
 			else
 			{
 				if ($thisAsFt >= 1)
 				{
-					return $thisAsFt."ft";
+					return round($thisAsFt,2)."ft";
 				}
 				else
 				{
-					return $thisAsIn."in";
+					return round($thisAsIn,0)."in";
 				}
 			}
 		}
@@ -143,17 +143,17 @@ function distance_fancify ($inputDistance, $inputUnit="cm", $imperial=false)
 		{
 			if ($inputDistance >= 1)
 			{
-				return $inputDistance."km";
+				return round($inputDistance,4)."km";
 			}
 			else
 			{
 				if ($thisAsM >= 1)
 				{
-					return $thisAsM."m";
+					return round($thisAsM,2)."m";
 				}
 				else
 				{
-					return $thisAsCm."cm";
+					return round($thisAsCm,0)."cm";
 				}
 			}
 		}

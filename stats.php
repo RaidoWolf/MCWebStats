@@ -60,7 +60,7 @@
 ?>
 <html>
 <head>
-	<title>MCWebStats - Stats: <? echo $player; ?></title>
+	<title>MCWebStats - Stats: <?php echo $player; ?></title>
 	<meta charset="utf-8">
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 </head>

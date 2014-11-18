@@ -1,37 +1,99 @@
+@charset utf-8;
+
 /* ##################### */
 /* MCWebStats Stylesheet */
 /* ##################### */
 
-/* Page Container */
-.container {
-	
+/* General Styling (html and body tags) */
+html,body {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+}
+
+/* Background */
+#background {
+
 }
 
 /* Page Wrapper */
-.wrapper {
-
+#wrapper {
+	
 }
 
-/* Body Tag */
-body{
-
+/* Page Container */
+#container {
+	
 }
 
 /* Anchor Tags */
 a {
+	
+}
 
+/* Data Class */
+.data {
+	font-family: monospace;
 }
 
 /* Striped Row Tables */
 tr:nth-child(even) {
-	background-color: #DDDDDD;
+	background: #dddddd;
+	color: #000000;
 }
 tr:nth-child(odd) {
-	background-color: #BBBBBB;
+	background: #bbbbbb;
+	color: #000000;
 }
 tr:nth-child(even):hover {
-	background-color: #CCCCCC;
+	background: #cccccc;
+	color: #000000;
 }
 tr:nth-child(odd):hover {
-	background-color: #AAAAAA;
+	background: #aaaaaa;
+	color: #000000;
+}
+
+/* Tooltipped Elements */
+/*
+ * To use:
+ * Name the element covered by the tooltip with class='tooltip'
+ * Put a span with class='tooltip-contents' inside that,
+ * put an <img class='callout' src='img/callout.gif' /> inside that,
+ * put the text of the tooltip inside that span.
+ */
+.tooltip {
+	outline: none;
+}
+.tooltip:hover {
+	text-decoration: none;
+}
+.tooltip span.tooltip-contents {
+	z-index: 10;
+	display: none;
+	padding: 14px 20px;
+	margin-top: 60px;
+	margin-left: -160px;
+	width: 240px;
+	line-height: 16px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0px 0px 8px 4px #666666;
+	-moz-box-shadow: 0px 0px 8px 4px #666666;
+	-webkit-box-shadow: 0px 0px 8px 4px #666666;
+	opacity: 0.8;
+}
+.tooltip:hover span.tooltip-contents {
+	display: inline;
+	position: absolute;
+	border: 2px solid #ffffff;
+	color: #eeeeee;
+	background: #000000 url(../img/tooltip-bg.png) repeat-x 0 0;
+}
+.tooltip:hover span.tooltip-contents img.callout {
+	z-index: 20;
+	position: absolute;
+	border: 0;
+	top: -14px;
+	left: 120px;
 }

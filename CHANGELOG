@@ -1,3 +1,12 @@
+Current Stable Version:         none
+Current Development Version:    0.4-alpha-mod-0 (in-progress)
+
+> 0.4 alpha
+    *NOTE: I had 0.6 alpha on my code, so I must have thought that's where I was at,
+     but I've since it isn't documented, I'm going to pretend it didn't happen.
+    *Began work on object-oriented framework.
+    *Centralized code by moving existing stats.php to index.php.
+    (IN PROGRESS)
 > 0.3 alpha
 	*Added cstdio's PHP-GetUUID to support Minecraft 1.8+ UUID system.
 	*Improved/updated documentation and legal

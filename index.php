@@ -1,14 +1,14 @@
 <?php
 
 	/*
-	 * Sputnik One Networks - Minecraft Web Stats - Version 0.6 alpha - stats.php
+	 * Sputnik One Networks - Minecraft Web Stats
 	 * copyright 2014 Alexander Barber
 	 * distributed under the terms of the MIT License (see LICENSE for more info)
 	 */
 
-	include_once 'config.php'; //include main configuration
-	include_once 'uuid.php'; //include PHP-GetUUID PlayerName->UUID converter
-	include_once 'lib/functions_units.php'; //include unit handling functions
+	include_once __DIR__.'config.php'; //include main configuration
+	include_once __DIR__.'lib/ext/uuid.php'; //include PHP-GetUUID PlayerName->UUID converter
+	include_once __DIR__.'lib/func/units.php'; //include unit handling functions
 	
 	// -- VARIABLE COLLECTOR -- //
 	if (isset($_REQUEST['player']))

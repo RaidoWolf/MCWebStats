@@ -1,15 +1,21 @@
 Current Stable Version:         none
-Current Development Version:    0.4-alpha-mod-0 (in-progress)
+Current Development Version:    0.7-alpha-mod-0 (in-progress)
 
+> 0.7 alpha
+    *Began work on object oriented framework.
+    *Centralized code by moving existing stats.php code to index.php.
+> 0.6 alpha
+    *Switched from Apache v2 License.
+    *Added imperial unit support.
+    *Added all distance stats.
+    *Added rounding to lengthy decimal distance output.
+> 0.5 alpha
+    *More stats
 > 0.4 alpha
-    *NOTE: I had 0.6 alpha on my code, so I must have thought that's where I was at,
-     but I've since it isn't documented, I'm going to pretend it didn't happen.
-    *Began work on object-oriented framework.
-    *Centralized code by moving existing stats.php to index.php.
-    (IN PROGRESS)
+    *Undocumented
 > 0.3 alpha
 	*Added cstdio's PHP-GetUUID to support Minecraft 1.8+ UUID system.
-	*Improved/updated documentation and legal
+	*Improved/updated documentation and legal.
 	*Moved configuration values to config.php for loading via PHP include.
 	*Added legacy support for pre 1.8 servers and users who logged in prior to 1.8.
 > prior to 0.3 alpha

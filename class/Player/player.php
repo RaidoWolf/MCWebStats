@@ -1,11 +1,5 @@
 <?php
 
-    /*
-     * Sputnik One Networks - Minecraft Web Stats
-     * copyright 2014 Alexander Barber
-     * distributed under the terms of the MIT License (see LICENSE for more info)
-     */
-
 class Player {
 
     protected $stats;
@@ -35,11 +29,3 @@ class Player {
     }
 
 }
-
-class PlayerException extends Exception {
-
-    //TODO
-
-}
-
-?>

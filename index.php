@@ -7,57 +7,43 @@
 	 */
 
 	include_once __DIR__.'config.php'; //include main configuration
-	include_once __DIR__.'lib/ext/uuid.php'; //include PHP-GetUUID PlayerName->UUID converter
-	include_once __DIR__.'lib/func/units.php'; //include unit handling functions
-	
+	include_once __DIR__.'lib/uuid.php'; //include PHP-GetUUID PlayerName->UUID converter
+	include_once __DIR__.'functions/units.php'; //include unit handling functions
+
 	// -- VARIABLE COLLECTOR -- //
-	if (isset($_REQUEST['player']))
-	{
-		if (isset($_POST['player']))
-		{
+	if (isset($_REQUEST['player'])) {
+		if (isset($_POST['player'])) {
 			$player = $_POST['player'];
-		}
-		elseif (isset($_GET['player']))
-		{
+		} elseif (isset($_GET['player'])) {
 			$player = $_GET['player'];
-		}
-		else
-		{
+		} else {
 			$player = null;
 		}
 		$player = preg_replace("/[\s]{1}/", "_", $player); //replace all whitespace characters with underscores
 		$player = preg_replace("/[^\w\d_]*/", "", $player); //delete any character that is not a letter, number, or underscore
-	}
-	else
-	{
+	} else {
 		$player = null;
 	}
-	if (isset($_REQUEST['units']))
-	{
-		if (isset($_POST['units']))
-		{
+
+	if (isset($_REQUEST['units'])) {
+		if (isset($_POST['units'])) {
 			$units = $_POST['units'];
-		}
-		elseif (isset($_GET['units']))
-		{
+		} elseif (isset($_GET['units'])) {
 			$units = $_GET['units'];
-		}
-		else
-		{
+		} else {
 			$units = "metric";
 		}
-		if ($units != "metric" && $units != "imperial")
-		{
+
+		if ($units != "metric" && $units != "imperial") {
 			$units = "metric";
 		}
-	}
-	else
-	{
+	} else {
 		$units = "metric";
 	}
+
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>MCWebStats - Stats: <?php echo $player; ?></title>
 	<meta charset="utf-8">
@@ -125,7 +111,7 @@
 				$ticksModuloSecondsPlayed = ($ticksPlayed % 20); //number of ticks left over after seconds floored (modulo)
 				$secondsModuloMinutesPlayed = (($ticksPlayed % 1200) / 20); //number of seconds left over after minutes floored (modulo)
 				$minutesModuloHoursPlayed = (($ticksPlayed % 72000) / 1200); //number of minutes left over after hours floored (modulo)
-				$hoursModuloDaysPlayed = (($ticksPlayed % 1728000) / 72000); //number of hours left over after days floored (modulo) 
+				$hoursModuloDaysPlayed = (($ticksPlayed % 1728000) / 72000); //number of hours left over after days floored (modulo)
 			$timePlayed = floor($daysPlayed)."d ".floor($hoursModuloDaysPlayed)."h ".floor($minutesModuloHoursPlayed)."m ".$secondsModuloMinutesPlayed."s";
 
 			// -- DISTANCE TRAVELED DATA -- //
@@ -173,7 +159,7 @@
 				elseif ($units == "imperial")
 				{
 					$distFallen = distance_fancify($cmFallen, "cm", true); // ... using imperial units
-				} 
+				}
 			@$cmBoated = $playerStatArray['stat.boatOneCm']; //get number of centimeters boated
 				if ($units == "metric")
 				{
@@ -299,7 +285,7 @@
 						<p>Distance Walked:</p>
 					</td>
 					<td>
-						<p>".$distWalked."</p> 
+						<p>".$distWalked."</p>
 					</td>
 				</tr>
 				<tr>
